@@ -1,0 +1,26 @@
+{
+  "name": "webpack-4",
+  "version": "1.0.0",
+  "description": "Curso de Webpack-4",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --entry ./src/js/index.js --output ./dist/bundle.js --mode development",
+    "build:local": "webpack --mode production",
+    "build:external": "webpack --config ./external/webpack.config.js",
+    "build:multi": "webpack --config ./multiple-entry-points/webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sgocastro/CursoWebPack.git"
+  },
+  "author": "@sgocastro",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sgocastro/CursoWebPack/issues"
+  },
+  "homepage": "https://github.com/sgocastro/CursoWebPack#readme",
+  "devDependencies": {
+    "webpack": "4.43.0",
+    "webpack-cli": "3.3.11"
+  }
+}
