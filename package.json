@@ -7,7 +7,11 @@
     "build": "webpack --entry ./src/js/index.js --output ./dist/bundle.js --mode development",
     "build:local": "webpack --mode production",
     "build:external": "webpack --config ./external/webpack.config.js",
-    "build:multi": "webpack --config ./multiple-entry-points/webpack.config.js"
+    "build:multi": "webpack --config ./multiple-entry-points/webpack.config.js",
+    "build:css": "webpack --config ./loaders/webpack.config.js",
+    "build:plugins": "webpack --config ./plugins/webpack.config.js",
+    "build:dev": "webpack-dev-server --config ./dev/webpack.config.js -w",
+    "build:babel": "webpack-dev-server --config ./babel/webpack.config.js -w"
   },
   "repository": {
     "type": "git",
@@ -20,7 +24,16 @@
   },
   "homepage": "https://github.com/sgocastro/CursoWebPack#readme",
   "devDependencies": {
+    "@babel/plugin-transform-runtime": "7.9.0",
+    "css-loader": "3.5.3",
+    "html-webpack-plugin": "4.2.0",
+    "mini-css-extract-plugin": "0.9.0",
+    "style-loader": "1.2.0",
     "webpack": "4.43.0",
-    "webpack-cli": "3.3.11"
+    "webpack-cli": "3.3.11",
+    "webpack-dev-server": "3.10.3"
+  },
+  "dependencies": {
+    "runtime": "0.14.1"
   }
 }
